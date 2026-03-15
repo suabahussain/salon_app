@@ -1,0 +1,6 @@
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include salon_booking *.css *.csv *.html *.ico *.js *.json *.md *.png *.py *.svg *.txt
+recursive-exclude salon_booking *.pyc

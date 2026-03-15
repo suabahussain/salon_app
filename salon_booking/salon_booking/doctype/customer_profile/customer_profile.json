@@ -1,0 +1,23 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:full_name",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": ["full_name", "user", "phone", "email", "default_address", "latitude", "longitude"],
+ "fields": [
+  {"fieldname": "full_name", "fieldtype": "Data", "label": "Full Name", "reqd": 1},
+  {"fieldname": "user", "fieldtype": "Link", "label": "User", "options": "User"},
+  {"fieldname": "phone", "fieldtype": "Data", "label": "Phone", "reqd": 1},
+  {"fieldname": "email", "fieldtype": "Data", "label": "Email"},
+  {"fieldname": "default_address", "fieldtype": "Small Text", "label": "Default Address"},
+  {"fieldname": "latitude", "fieldtype": "Float", "label": "Latitude"},
+  {"fieldname": "longitude", "fieldtype": "Float", "label": "Longitude"}
+ ],
+ "module": "Salon Booking",
+ "name": "Customer Profile",
+ "permissions": [
+  {"create": 1, "delete": 1, "read": 1, "write": 1, "role": "System Manager"},
+  {"create": 1, "read": 1, "write": 1, "role": "Salon Customer"}
+ ]
+}

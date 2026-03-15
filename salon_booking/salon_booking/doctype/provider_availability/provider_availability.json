@@ -1,0 +1,21 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:AVL-{#####}",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": ["provider", "day_of_week", "start_time", "end_time", "is_available"],
+ "fields": [
+  {"fieldname": "provider", "fieldtype": "Link", "label": "Provider", "options": "Service Provider", "reqd": 1},
+  {"fieldname": "day_of_week", "fieldtype": "Select", "label": "Day", "options": "Monday\nTuesday\nWednesday\nThursday\nFriday\nSaturday\nSunday", "reqd": 1},
+  {"fieldname": "start_time", "fieldtype": "Time", "label": "Start Time", "reqd": 1},
+  {"fieldname": "end_time", "fieldtype": "Time", "label": "End Time", "reqd": 1},
+  {"default": "1", "fieldname": "is_available", "fieldtype": "Check", "label": "Is Available"}
+ ],
+ "module": "Salon Booking",
+ "name": "Provider Availability",
+ "permissions": [
+  {"create": 1, "delete": 1, "read": 1, "write": 1, "role": "System Manager"},
+  {"create": 1, "read": 1, "write": 1, "role": "Service Provider Manager"}
+ ]
+}

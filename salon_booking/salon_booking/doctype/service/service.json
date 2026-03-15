@@ -1,0 +1,22 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:service_name",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": ["service_name", "category", "description", "duration_mins", "base_price", "is_active"],
+ "fields": [
+  {"fieldname": "service_name", "fieldtype": "Data", "label": "Service Name", "reqd": 1},
+  {"fieldname": "category", "fieldtype": "Select", "label": "Category", "options": "Hair\nMakeup\nSpa\nSkincare\nNails\nOther"},
+  {"fieldname": "description", "fieldtype": "Small Text", "label": "Description"},
+  {"fieldname": "duration_mins", "fieldtype": "Int", "label": "Duration (mins)", "reqd": 1},
+  {"fieldname": "base_price", "fieldtype": "Currency", "label": "Base Price", "reqd": 1},
+  {"default": "1", "fieldname": "is_active", "fieldtype": "Check", "label": "Is Active"}
+ ],
+ "module": "Salon Booking",
+ "name": "Service",
+ "permissions": [
+  {"create": 1, "delete": 1, "read": 1, "write": 1, "role": "System Manager"},
+  {"read": 1, "role": "Salon Customer"}
+ ]
+}

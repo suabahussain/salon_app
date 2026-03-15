@@ -1,0 +1,22 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:RVW-{#####}",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": ["booking", "customer", "provider", "rating", "review_text", "review_date"],
+ "fields": [
+  {"fieldname": "booking", "fieldtype": "Link", "label": "Booking", "options": "Booking", "reqd": 1, "unique": 1},
+  {"fieldname": "customer", "fieldtype": "Link", "label": "Customer", "options": "Customer Profile", "reqd": 1},
+  {"fieldname": "provider", "fieldtype": "Link", "label": "Provider", "options": "Service Provider", "reqd": 1},
+  {"fieldname": "rating", "fieldtype": "Float", "label": "Rating", "reqd": 1},
+  {"fieldname": "review_text", "fieldtype": "Small Text", "label": "Review"},
+  {"fieldname": "review_date", "fieldtype": "Date", "label": "Review Date", "default": "Today"}
+ ],
+ "module": "Salon Booking",
+ "name": "Review Rating",
+ "permissions": [
+  {"create": 1, "delete": 1, "read": 1, "write": 1, "role": "System Manager"},
+  {"create": 1, "read": 1, "role": "Salon Customer"}
+ ]
+}
