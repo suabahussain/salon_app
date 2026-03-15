@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# Frappe / Bench
+sites/
+logs/
+config/pids/
+.env
+*.log
+node_modules/
+assets/
+
+# Editors
+.vscode/
+.idea/
+.DS_Store
+
+# Build artifacts
+dist/
+build/

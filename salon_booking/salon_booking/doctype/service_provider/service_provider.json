@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:provider_name",
+ "creation": "2026-03-15 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "provider_name",
+  "provider_type",
+  "mobile_no",
+  "email",
+  "service",
+  "city",
+  "address",
+  "latitude",
+  "longitude",
+  "average_rating",
+  "is_active"
+ ],
+ "fields": [
+  {"fieldname": "provider_name", "fieldtype": "Data", "label": "Provider Name", "reqd": 1},
+  {"fieldname": "provider_type", "fieldtype": "Select", "label": "Provider Type", "options": "Freelancer\nSalon", "reqd": 1},
+  {"fieldname": "mobile_no", "fieldtype": "Data", "label": "Mobile No", "reqd": 1},
+  {"fieldname": "email", "fieldtype": "Data", "label": "Email"},
+  {"fieldname": "service", "fieldtype": "Link", "label": "Primary Service", "options": "Service"},
+  {"fieldname": "city", "fieldtype": "Data", "label": "City", "reqd": 1},
+  {"fieldname": "address", "fieldtype": "Small Text", "label": "Address"},
+  {"fieldname": "latitude", "fieldtype": "Float", "label": "Latitude"},
+  {"fieldname": "longitude", "fieldtype": "Float", "label": "Longitude"},
+  {"fieldname": "average_rating", "fieldtype": "Float", "label": "Average Rating", "default": "0"},
+  {"default": "1", "fieldname": "is_active", "fieldtype": "Check", "label": "Is Active"}
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-15 00:00:00.000000",
+ "module": "Salon Booking",
+ "name": "Service Provider",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1},
+  {"create": 1, "read": 1, "write": 1, "role": "Service Provider Manager"}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,31 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:BK-{YYYY}-{#####}",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "customer", "provider", "service", "booking_date", "booking_time", "address", "latitude", "longitude", "status", "price", "payment_status", "notes"
+ ],
+ "fields": [
+  {"fieldname": "customer", "fieldtype": "Link", "label": "Customer", "options": "Customer Profile", "reqd": 1},
+  {"fieldname": "provider", "fieldtype": "Link", "label": "Provider", "options": "Service Provider", "reqd": 1},
+  {"fieldname": "service", "fieldtype": "Link", "label": "Service", "options": "Service", "reqd": 1},
+  {"fieldname": "booking_date", "fieldtype": "Date", "label": "Booking Date", "reqd": 1},
+  {"fieldname": "booking_time", "fieldtype": "Time", "label": "Booking Time", "reqd": 1},
+  {"fieldname": "address", "fieldtype": "Small Text", "label": "Service Address", "reqd": 1},
+  {"fieldname": "latitude", "fieldtype": "Float", "label": "Latitude"},
+  {"fieldname": "longitude", "fieldtype": "Float", "label": "Longitude"},
+  {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Pending\nConfirmed\nIn Progress\nCompleted\nCancelled", "default": "Pending", "reqd": 1},
+  {"fieldname": "price", "fieldtype": "Currency", "label": "Price", "reqd": 1},
+  {"fieldname": "payment_status", "fieldtype": "Select", "label": "Payment Status", "options": "Unpaid\nPaid\nRefunded", "default": "Unpaid"},
+  {"fieldname": "notes", "fieldtype": "Small Text", "label": "Notes"}
+ ],
+ "module": "Salon Booking",
+ "name": "Booking",
+ "permissions": [
+  {"create": 1, "delete": 1, "read": 1, "write": 1, "role": "System Manager"},
+  {"create": 1, "read": 1, "write": 1, "role": "Salon Customer"},
+  {"read": 1, "write": 1, "role": "Service Provider Manager"}
+ ]
+}
